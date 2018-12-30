@@ -2,29 +2,8 @@
 #include <cstdint>
 
 namespace constants {
-enum Mnemonic : uint8_t {
-  M_NOOP = UINT8_MAX,
-  M_ADD = 0,
-  M_SUB = 1,
-  M_AND,
-  M_EOR,
-  M_ORR,
-  M_MOV,
-  M_CMP,
-  M_IFEQ,
-  M_IFNE,
-  M_IFLT,
-  M_IFLE,
-  M_IFGT,
-  M_IFGE,
-  M_PUSH,
-  M_POP,
-  M_LDR,
-  M_STR
-};
-
 enum OpCode : uint8_t {
-  NOOP = UINT8_MAX,
+  NOP = UINT8_MAX,
   ADD = 0,
   SUB = 1,
   AND,
@@ -41,7 +20,11 @@ enum OpCode : uint8_t {
   PUSH,
   POP,
   LDR,
-  STR
+  LDRH,
+  LDRB,
+  STR,
+  STRH,
+  STRB
 };
 
 enum Registers : uint8_t {
