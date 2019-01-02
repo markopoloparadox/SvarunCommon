@@ -25,7 +25,10 @@ enum OpCode : uint8_t {
   LDRB,
   STR,
   STRH,
-  STRB
+  STRB,
+  MUL,
+  LSL,
+  LSR
 };
 
 enum Registers : uint8_t {
@@ -39,8 +42,9 @@ enum Registers : uint8_t {
   R7,
   R8,
   R9,
-  PC,  // Program counter
-  SP   // Stack pointer
+  PC,   // Program counter
+  SP,   // Stack pointer
+  ZR    // Zero register
 };
 
 enum ImmediateOperand : uint8_t {
