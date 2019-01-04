@@ -18,8 +18,6 @@ enum OpCode : uint8_t {
   JLE,
   JGT,
   JGE,
-  PUSH,
-  POP,
   LDR,
   LDRH,
   LDRB,
@@ -48,8 +46,9 @@ enum Registers : uint8_t {
 };
 
 enum ImmediateOperand : uint8_t {
-  OPERAND = 0,
-  REGISTER = 1
+  NUMBER = 0,
+  REGISTER = 1,
+  MEMORY = 2
 };
 
 }
