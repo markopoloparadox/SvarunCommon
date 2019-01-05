@@ -11,22 +11,25 @@ enum OpCode : uint8_t {
   ORR,
   MOV,
   CMP,
-  JMP,
+  JMP,    // Jump
   JEQ,
   JNE,
   JLT,
   JLE,
   JGT,
   JGE,
-  LDR,
+  JL,     // Jump with Link
+  LDR,    // Load Register
   LDRH,
   LDRB,
-  STR,
+  STR,    // Store Register
   STRH,
   STRB,
   MUL,
   LSL,
-  LSR
+  LSR,
+  STP,
+  LDP
 };
 
 enum Registers : uint8_t {
@@ -42,7 +45,9 @@ enum Registers : uint8_t {
   R9,
   PC,   // Program counter
   SP,   // Stack pointer
-  ZR    // Zero register
+  ZR,   // Zero register
+  LR,   // Link register    // From arm: Link register. This is a synonym for X30.
+  FP    // Frame pointer    // This is a synonym for X29.
 };
 
 enum ImmediateOperand : uint8_t {
